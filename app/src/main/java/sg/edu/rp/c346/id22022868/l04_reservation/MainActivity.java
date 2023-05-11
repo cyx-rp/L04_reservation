@@ -22,11 +22,21 @@ public class MainActivity extends AppCompatActivity {
     Button btnConfirm;
     Button btnReset;
 
+    String name;
+    String phoneNo;
+    String pax;
+    String smoke;
+    int day;
+    int month;
+    int year;
+    int hour;
+    int min;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         etName = findViewById(R.id.editTextName);
         etPhoneNo = findViewById(R.id.editTextPhone);
@@ -42,12 +52,28 @@ public class MainActivity extends AppCompatActivity {
         btnConfirm = findViewById(R.id.buttonConfirm);
         btnReset = findViewById(R.id.buttonReset);
 
+
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                name = etName.getText().toString();
+                phoneNo = etPhoneNo.getText().toString();
+                pax = etPax.getText().toString();
+                day = dateSelect.getDayOfMonth();
+                month = dateSelect.getMonth();
+                year = dateSelect.getYear();
+                hour = timeSelect.getCurrentHour();
+                min = timeSelect.getCurrentMinute();
 
-                Toast.makeText(MainActivity.this, "Booking confirmed!", Toast.LENGTH_SHORT);
+                if (rgSmoke.getCheckedRadioButtonId() == R.id.radioButtonSmoke) {
+                    smoke = "Smoking";
+                }
+                else {
+                    smoke = "Non-smoking";
+                }
+
+                Toast.makeText(MainActivity.this, String.format("Name: %s\nPhone no.: %s\nPax: %s\nSitting Area: %s\nBooking on %d/%d/%d at %d:%d confirmed!", name, phoneNo, pax, smoke, day, (month+1), year, hour, min), Toast.LENGTH_SHORT).show();
 
             }
         });

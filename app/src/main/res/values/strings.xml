@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">L04_reservation</string>
-    <string name="name">Name:</string>
+    <string name="name">Name: </string>
     <string name="non_smoking">Non-smoking</string>
     <string name="smoking">Smoking</string>
-    <string name="choice_of_sitting_area">Choice of sitting area:</string>
-    <string name="date_of_reservation">Date of reservation:</string>
+    <string name="choice_of_sitting_area">Choice of sitting area: </string>
+    <string name="date_of_reservation">Date of reservation: </string>
     <string name="enter_pax">Enter pax</string>
-    <string name="number_of_people">Number of people</string>
+    <string name="pax">Number of pax: </string>
     <string name="enter_phone_number">Enter your phone number</string>
-    <string name="phone_number">Phone number:</string>
+    <string name="phone_number">Phone number: </string>
     <string name="enter_name">Enter your name here</string>
     <string name="reset">Reset</string>
     <string name="confirm_reservation">Confirm reservation</string>
-    <string name="time_of_reservation">Time of reservation</string>
+    <string name="time_of_reservation">Time of reservation: </string>
 </resources>
